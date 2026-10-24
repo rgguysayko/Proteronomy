@@ -8,6 +8,10 @@ Welcome to the official open-science repository for **Proteronomy**, an independ
 
 This framework establishes a formal, axiomatic structure for classifying temporal consistency regimes and analyzing controlled temporal interventions, completely independent of any particular physical, computational, biological, or narrative realization.
 
+**Official paper (cite this):** https://doi.org/10.5281/zenodo.23445534
+
+**Author:** R.G. Guysayko
+
 ---
 
 ## 🌌 Core Lexicon & Vocabulary
@@ -68,17 +72,18 @@ We welcome contributions from researchers across all traditional disciplines. Yo
 If you build upon this framework, please cite the foundational preprint text:
 
 ```bibtex
-@unregistered{guysayko2026proteronomy,
+@misc{guysayko2026proteronomy,
   author    = {Guysayko, R.G.},
   title     = {Proteronomy: The Science of the Laws of Before-and-After},
   year      = {2026},
   month     = {October},
   note      = {Preprint v1.1},
-  doi       = {10.5281/zenodo.23445535},
-  url       = {https://doi.org}
+  doi       = {10.5281/zenodo.23445534},
+  url       = {https://doi.org/10.5281/zenodo.23445534}
 }
 ```
 
 ---
-Contact: [rgguysayko](https://github.com)  
+Contact: [rgguysayko](https://github.com/rgguysayko) 
+
 *Proteronomy begins with the recognition that before-and-after is a structure before it is a physics.*
