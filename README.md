@@ -1,8 +1,8 @@
 # ⏳ Proteronomy: The Science of the Laws of Before-and-After
 
-[![Zenodo DOI](https://shields.io)](https://doi.org)
-[![License: CC BY 4.0](https://shields.io)](https://creativecommons.org)
-[![Field Status](https://shields.io)]()
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23599830.svg)](https://doi.org/10.5281/zenodo.23599830)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Status](https://img.shields.io/badge/Status-Preprint_v1.1-blue.svg)](https://doi.org/10.5281/zenodo.23445534)
 
 Welcome to the official open-science repository for **Proteronomy**, an independent, substrate-independent scientific discipline devoted to the general laws that govern the relation of before-and-after ($\prec$). 
 
