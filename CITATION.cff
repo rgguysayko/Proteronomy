@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper below."
+title: "Proteronomy v1.1.1"
+authors:
+  - family-names: "Guysayko"
+    given-names: "R.G."
+    orcid: "https://orcid.org/0009-0007-8361-9683"
+doi: 10.5281/zenodo.23445534
+license: CC-BY-4.0
