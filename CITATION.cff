@@ -3,7 +3,7 @@ message: "If you use this work, please cite the paper below."
 title: "Proteronomy: The Science of the Laws of Before-and-After"
 authors:
   - family-names: "Guysayko"
-    given-names: "R.G."
-    orcid: "https://orcid.org/0009-0007-8361-9683"
+  given-names: "R. G."
+  orcid: "https://orcid.org/0009-0007-8361-9683"
 doi: 10.5281/zenodo.23445534
 license: CC-BY-4.0
