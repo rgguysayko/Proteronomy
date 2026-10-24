@@ -4,19 +4,27 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status](https://img.shields.io/badge/Status-Preprint_v1.1-blue.svg)](https://doi.org/10.5281/zenodo.23445534)
 
-Welcome to the official open-science repository for **Proteronomy**, an independent, substrate-independent scientific discipline devoted to the general laws that govern the relation of before-and-after ($\prec$). 
+**In plain words:** "Before" and "after" are everywhere: history, memory, cause and effect, planning, physics, computing. Proteronomy is a proposal for studying the rules that make "before" and "after" hold together, and what happens to those rules when time is a single line, branches, loops back on itself, or runs in several versions at once.
+
+This is an early, open proposal, not an established field. Challenges, corrections and questions are welcome in the **Discussions** tab.
+
+📄 **Official paper (cite this):** https://doi.org/10.5281/zenodo.23445534
+
+✍️ **Author:** R.G. Guysayko
+
+---
+
+## Technical description
+
+Welcome to the official open-science repository for **Proteronomy**, a proposed, substrate-independent scientific discipline devoted to the general laws that govern the relation of before-and-after ($\prec$).
 
 This framework establishes a formal, axiomatic structure for classifying temporal consistency regimes and analyzing controlled temporal interventions, completely independent of any particular physical, computational, biological, or narrative realization.
-
-**Official paper (cite this):** https://doi.org/10.5281/zenodo.23445534
-
-**Author:** R.G. Guysayko
 
 ---
 
 ## 🌌 Core Lexicon & Vocabulary
 
-* **Proteronomy** `/ˌproʊ.tərˈɒn.ə.mi/` (*noun*) — The formal scientific discipline focused on the substrate-independent laws of before-and-after and temporal consistency regimes.
+* **Proteronomy** `/ˌproʊ.tərˈɒn.ə.mi/` (*noun*) — The proposed scientific discipline focused on the substrate-independent laws of before-and-after and temporal consistency regimes.
 * **Proteronomist** `/ˌproʊ.tərˈɒn.ə.mɪst/` (*noun*) — A scientist or researcher who studies proteronomy, its foundational postulates, and the rules governing transitions between temporal consistency regimes.
 * **Proteronomic** `/ˌproʊ.tərəˈnɒm.ɪk/` (*adjective*) — Of or relating to proteronomy; describing a universal constraint, law, or technology governing temporal structures.
 
@@ -24,7 +32,7 @@ This framework establishes a formal, axiomatic structure for classifying tempora
 
 ## 🗺️ The Four Axiomatic Consistency Regimes
 
-Any coherent temporal structure mapped by this science falls into one of four fundamental categories:
+In this framework, any coherent temporal structure falls into one of four fundamental categories:
 
 | Regime | Precedence Structure | Cyclicity | Interference Rule | Primary Axiom |
 | :--- | :--- | :--- | :--- | :--- |
@@ -84,6 +92,6 @@ If you build upon this framework, please cite the foundational preprint text:
 ```
 
 ---
-Contact: [rgguysayko](https://github.com/rgguysayko) 
+Contact: [rgguysayko](https://github.com/rgguysayko)
 
 *Proteronomy begins with the recognition that before-and-after is a structure before it is a physics.*
