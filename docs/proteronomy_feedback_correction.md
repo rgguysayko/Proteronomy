@@ -1,4 +1,3 @@
-[proteronomy_feedback_correction.md](https://github.com/user-attachments/files/34207598/proteronomy_feedback_correction.md)
 # Mathematical Formalization of Proteronomic Feedback Correction
 
 *Resolving Finite-Time Singularities in Complex Historical-System Models*
