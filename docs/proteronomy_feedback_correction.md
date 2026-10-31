@@ -1,105 +1,124 @@
-# Mathematical Formalization of Proteronomic Feedback Correction
+# Appendix A: Anticipatory Feedback and the Von Foerster Singularity
 
-*Resolving Finite-Time Singularities in Complex Historical-System Models*
+*A mathematical formalization within Proteronomy*
 
----
-
-## 1. Abstract & Context
-
-Classical demographic and historical growth models—most notably Heinz von Foerster’s 1960 *Science* paper predicting a population singularity on November 13, 2026—suffer from a foundational structural flaw: **unidirectional temporal extrapolation**.
-
-By treating historical trends as an unconstrained driver of future states, classical models ignore the systemic feedback loop wherein a system's awareness of its future horizon acts backward upon its current transition operators.
-
-Within the **Proteronomy** theoretical framework, we formalize this correction by introducing an adaptive **Anticipatory Precedence Operator**.
+**R.G. Guysayko**  
+*ORCID: [0009-0007-8361-9683](https://orcid.org/0009-0007-8361-9683)*
 
 ---
 
-## 2. Classical Unidirectional Growth vs. Real-World Dynamics
+## A.1 Purpose and scope
 
-In classical hyper-exponential models, population state $N(t)$ follows an unconstrained differential equation driven purely by historical accumulation parameters $k$:
+In 1960, von Foerster, Mora and Amiot fitted the history of world population to a curve that grows without bound and reaches infinity on Friday, 13 November 2026 [[1](#ref-1)]. This appendix uses that forecast as a case study. The question is: what must be added to a growth model so that a system's awareness of a projected end date can change the path leading to it? We propose one minimal answer, the **Proteronomic precedence kernel**, and state precisely what it does and does not guarantee. This is a toy model, not a demographic forecast: the sensitivity parameter $\alpha$ has not been estimated from data.
 
-$$
-\frac{dN(t)}{dt} = k \cdot [N(t)]^k \quad \implies \quad N(t) = \frac{C}{(t_c - t)^\beta}
-$$
-
-Where $t_c$ represents a theoretical finite-time singularity boundary. As $t \to t_c$, $N(t) \to \infty$.
-
-### The Structural Flaw
-
-This formulation treats the system as closed and unthinking. It ignores the reality that open, complex systems generate informational representations of projected boundaries $t_c$, triggering structural adaptations (e.g., demographic transition, resource management changes, lower fertility rates).
+> **In plain words:** In the classical model, growth feeds on itself faster and faster until the curve shoots to infinity. Real populations notice where a curve is heading and change course (fewer births, new technology, new policy). We model that "noticing" as a dimmer switch $P$ that is fully on when the date is far away and slides smoothly to off as the date gets close.
 
 ---
 
-## 3. The Proteronomic Feedback Operator
+## A.2 The classical model
 
-To account for dynamic temporal precedence, we define the **Proteronomic Precedence Kernel** $\mathcal{P}(t, t_c) \in [0, 1]$:
-
-$$
-\mathcal{P}(t, t_c) = \exp\left( -\frac{\alpha}{t_c - t} \right)
-$$
-
-Where:
-
-* $t_c$ is the projected singularity/boundary time.
-* $\alpha > 0$ is the system's *anticipatory sensitivity parameter*.
-* $t < t_c$ represents current system time.
-
-### Asymptotic Limits of $\mathcal{P}(t, t_c)$:
-
-1. **Distant Horizon ($t \ll t_c$):**
+Let $N(t)$ be the population at time $t$, with initial value $N_0 > 0$ at time $t_0$. The classical hyperbolic law is:
 
 $$
-\lim_{t \to 0} \mathcal{P}(t, t_c) = 1
+\frac{dN}{dt} = k N^p, \quad N(t_0) = N_0, \quad k > 0, \quad p > 1 \tag{1}
 $$
 
-*(The system behaves according to standard classical trajectory).*
-
-2. **Approaching Horizon ($t \to t_c$):**
+Separating variables gives the solution:
 
 $$
-\lim_{t \to t_c} \mathcal{P}(t, t_c) = 0
+N(t) = [(p-1)k(t_c - t)]^{-\beta} = \frac{C}{(t_c - t)^\beta}, \quad \beta = \frac{1}{p-1}, \quad C = [(p-1)k]^{-\beta} \tag{2}
 $$
 
-*(The projected boundary exerts exponential dampening on transition rates).*
+where $t_c = t_0 + N_0^{1-p} / ((p-1)k)$ is the finite-time singularity: $N(t) \to \infty$ as $t \to t_c^-$.
+
+Throughout, $T = t_c - t_0$ and $t_c$ denotes the blow-up time of the classical model (1). The von Foerster fit, with exponent $\beta \approx 0.99$, corresponds to $p \approx 2$.
 
 ---
 
-## 4. Modified Proteronomic Differential Equation
+## A.3 The Proteronomic precedence kernel
 
-Integrating the precedence kernel into the system's rate equation yields:
-
-$$
-\frac{dN(t)}{dt} = k \cdot [N(t)]^k \cdot \mathcal{P}(t, t_c) - \Omega(N, t)
-$$
-
-Where $\Omega(N, t)$ represents the systemic adaptation function (e.g., cultural shifts, technological efficiency, policy changes).
-
-### Mathematical Resolution of Singularities
-
-Evaluating the growth limit as $t \to t_c$:
+For $t < t_c$, define:
 
 $$
-\lim_{t \to t_c} \left( k \cdot [N(t)]^k \cdot e^{-\frac{\alpha}{t_c - t}} \right) = 0
+P(t, t_c) = \exp\left( -\frac{\alpha}{t_c - t} \right), \quad \text{and } P = 0 \text{ for } t \ge t_c \tag{3}
 $$
 
-Because the exponential dampening of $\mathcal{P}(t, t_c)$ dominates polynomial or power-law growth, the singularity $N(t_c) = \infty$ is mathematically prevented. Instead, $N(t)$ undergoes a smooth phase transition, stabilizing asymptotically toward a finite carrying capacity $N_{\max}$:
+where $\alpha > 0$ is the anticipatory sensitivity, measured in units of time. Its properties are:
 
-$$
-N_{\max} = \int_{t_0}^{t_c} \left( k \cdot [N(\tau)]^k \cdot \mathcal{P}(\tau, t_c) - \Omega(N, \tau) \right) d\tau < \infty
-$$
+1. **Range and Monotonicity:** $0 < P < 1$ for $t < t_c$, and $P$ is strictly decreasing in $t$.
+2. **Smoothness:** $P \to 0$ as $t \to t_c^-$, and so do all of its derivatives, so the switch-off is perfectly smooth (no kink).
+3. **Asymptotic Behavior:** $P \ge 1 - \alpha / (t_c - t)$. When the horizon is far away, $t_c - t$ is much larger than $\alpha$, so $P \approx 1$ and the classical model is recovered.
+4. **Half-Life:** $P = \frac{1}{2}$ when $t_c - t = \alpha / \ln 2 \approx 1.44 \alpha$. So a larger $\alpha$ means the system starts reacting earlier.
 
 ---
 
-## 5. Theoretical Axiom for Proteronomy
+## A.4 The modified equation and its guarantees
+
+Including the kernel and a separate adaptation term $\Omega$, the rate equation becomes:
+
+$$
+\frac{dN}{dt} = k N^p \cdot P(t, t_c) - \Omega(N, t), \quad N(t_0) = N_0 \tag{4}
+$$
+
+Here $\Omega(N, t) \ge 0$ is a continuous adaptation function for all other responses (cultural shifts, technological efficiency, policy changes); we consider times while $N$ remains positive.
+
+### Proposition 1 ($\Omega = 0$)
+Let $I_\infty = \int_{t_0}^{t_c} P(s, t_c) \, ds$, which equals $T e^{-\alpha/T} - \alpha E_1(\alpha/T)$, where $E_1$ is the exponential integral. Then:
+
+$$
+N(t)^{1-p} = N_0^{1-p} - (p-1)k \int_{t_0}^{t} P(s, t_c) \, ds \tag{5}
+$$
+
+and $N(t)$ stays finite on $[t_0, t_c)$, with a finite limit as $t \to t_c^-$, if and only if:
+
+$$
+(p-1)k I_\infty < N_0^{1-p} \tag{6}
+$$
+
+*Proof.* Separate variables: $N^{-p} dN = k P \, dt$, and integrate to get (5). $N$ blows up exactly when the right-hand side of (5) reaches zero. That side decreases with $t$ and has the finite value $N_0^{1-p} - (p-1)k I_\infty$ at $t_c$, so it stays positive on $[t_0, t_c]$ exactly when (6) holds. The closed form of $I_\infty$ follows by substituting $u = t_c - s$ and integrating by parts. **Q.E.D.**
+
+### Corollary 1 (The Proteronomic result)
+Since $t_c$ is the classical blow-up time, $(p-1)k T N_0^{p-1} = 1$, so condition (6) is equivalent to $I_\infty < T$. Because $P < 1$, we always have $I_\infty = T - \int (1-P) ds < T$. Hence for every $\alpha > 0$, the singularity at $t_c$ is prevented, and the population approaches the finite value:
+
+$$
+N_c = [(p-1)k(T - I_\infty)]^{-\beta} \tag{7}
+$$
+
+Two limits confirm the formula:
+* As $\alpha \to 0$, $I_\infty \to T$ and $N_c \to \infty$: the classical singularity is recovered.
+* As $\alpha \to \infty$, $I_\infty \to 0$ and $N_c \to N_0$: growth is fully suppressed.
+
+### Corollary 2 (Adaptation)
+With $\Omega \ge 0$, equation (4) gives $dN/dt \le k N^p P$, so by the standard comparison principle $N(t)$ never exceeds the $\Omega = 0$ solution. Adaptation can therefore only lower the ceiling: $N(t) \le N_c$ on $[t_0, t_c]$.
+
+> **What happens after $t_c$:** For $t \ge t_c$, the kernel is zero and (4) reduces to $dN/dt = -\Omega$: the growth term is switched off and the later path is set entirely by $\Omega$. $N_c$ is a finite ceiling at the end of the growth phase, not a logistic-type carrying capacity, and this appendix makes no claim about long-run equilibrium.
+
+---
+
+## A.5 Axiom of Anticipatory Precedence (conditional form)
 
 > **Axiom of Anticipatory Precedence:**  
-> *No open, complex, information-processing system can realize a finite-time singularity $t_c$ driven purely by historical states, because the informational projection of $t_c$ modifies the local state transition operators $\mathcal{P}(t, t_c)$ for all $t < t_c$.*
+> *If an open, complex, information-processing system can form a representation of a projected boundary $t_c$ and act on it, then its transition operator depends on $t_c$ through a precedence factor $P(t, t_c)$ for all $t < t_c$. Consequently, a forecast of $t_c$ that assumes the transition operator is independent of $t_c$ is not self-consistent for such a system.*
+
+**Scope:** The axiom applies only to systems that detect and respond to the projection. It says nothing about systems that cannot or do not respond (for example, a population never exposed to the forecast, or one that ignores it). Whether a real system meets the condition is an empirical question.
 
 ---
 
-## 6. How to Integrate into Paper / Manuscript
+## A.6 Limitations and relation to prior work
 
-To add this section as an update or appendix in your preprint:
+* **The guarantee is easy to obtain:** Corollary 1 holds for any damping factor with $0 \le P \le 1$ that is below 1 over some stretch of time. The exponential form is chosen for smoothness, not necessity. The scientific content therefore lies in justifying a particular $P$ and measuring $\alpha$, which this appendix does not do.
+* **$t_c$ is taken as given:** In a real system, the projected date itself moves as the system responds. Treating this as a fixed-point problem is left to future work.
+* **No empirical validation:** World population growth has already slowed relative to the hyperbolic curve since the 1960s, so the model should be tested against data rather than assumed.
+* **Related ideas:** Anticipatory systems [[2](#ref-2)]; self-fulfilling and self-defeating predictions [[3](#ref-3), [4](#ref-4)]; the Lucas critique [[5](#ref-5)]; finite-time singularities in complex systems [[6](#ref-6)]; hyperbolic population models [[7](#ref-7)]. What is added here is an explicit feedback factor from the projected boundary inside a hyperbolic growth law, with exact conditions for when blow-up is avoided.
 
-1. **Section Insertion:** Place this under *Section 4: Applications to Complex Historical Systems* or as *Appendix A: Resolution of Demographic Singularities*.
-2. **Citation Integration:** Cite von Foerster et al. (1960), *"Doomsday: Friday, 13 November, A.D. 2026"*, *Science*, 132(3436), 1291-1295 as a case study demonstrating why unconstrained linear/exponential temporal models fail in real-world systems.
+---
+
+## References
+
+1. <a id="ref-1"></a>von Foerster, H., Mora, P. M., & Amiot, L. W. (1960). Doomsday: Friday, 13 November, A.D. 2026. *Science*, 132(3436), 1291–1295.
+2. <a id="ref-2"></a>Rosen, R. (1985). *Anticipatory Systems*. Pergamon Press.
+3. <a id="ref-3"></a>Merton, R. K. (1948). The self-fulfilling prophecy. *The Antioch Review*, 8(2), 193–210.
+4. <a id="ref-4"></a>Grunberg, E., & Modigliani, F. (1954). The predictability of social events. *Journal of Political Economy*, 62(6), 465–478.
+5. <a id="ref-5"></a>Lucas, R. E. (1976). Econometric policy evaluation: a critique. *Carnegie-Rochester Conference Series on Public Policy*, 1, 19–46.
+6. <a id="ref-6"></a>Sornette, D. (2003). *Why Stock Markets Crash*. Princeton University Press.
+7. <a id="ref-7"></a>Kapitza, S. P. (1996). The phenomenological theory of world population growth. *Physics-Uspekhi*, 39(1), 57–71.
